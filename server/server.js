@@ -12,12 +12,13 @@ app.use(cors());
 app.use(express.json());
 const axios = require("axios");
 const db = require("./database");
+
 const PORT = 3001;
 //===========================Clinic DB===================================
 const SECRET = "1I1d6WhwZWjGn4ijZDpBaGq";
 const query = util.promisify(db.query).bind(db);
 // =================================Singup Request===============================
-const clientSignup = require("./routes//clientSignupServerFile");
+const clientSignup = require("./routes/clientSignupServerFile");
 app.use("/Profile", clientSignup);
 // =================================Login Request===============================
 const clientLogin = require("./routes/clientLoginServerFile");

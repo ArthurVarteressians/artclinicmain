@@ -1,3 +1,3 @@
-const End_point = 'http://54.210.198.235:3001';
+const End_point = 'http://54.227.201.183:3001';
 
 export default End_point;

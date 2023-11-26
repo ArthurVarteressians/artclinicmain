@@ -7,7 +7,7 @@ import ManagerNav from "../ManagerNav/ManagerNav";
 import Footer from "../../Footer/Footer";
 import Swal from "sweetalert2";
 import "./DoctorGetinfo.css";
-
+import End_point from "../../../Baseurl";
 const DoctorAppointments = () => {
   const [appointments, setAppointments] = useState([]);
   const [error, setError] = useState(null);
@@ -32,7 +32,7 @@ const DoctorAppointments = () => {
     }).then((result) => {
       if (result.isConfirmed) {
         Axios.put(
-          `http://localhost:3001/api/appointments/${appointmentnumber}`,
+          `${End_point}/api/appointments/${appointmentnumber}`,
           {
             status: newStatus,
           },
@@ -59,7 +59,7 @@ const DoctorAppointments = () => {
   };
 
   const getDoctorName = () => {
-    Axios.get("http://localhost:3001/getDoctorName", {
+    Axios.get(`${End_point}/getDoctorName`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -80,7 +80,7 @@ const DoctorAppointments = () => {
   const handleGetAppointments = () => {
     setShowOpenAppointments(true);
 
-    Axios.get("http://localhost:3001/api/doctors/openAppointments", {
+    Axios.get(`${End_point}/api/doctors/openAppointments`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
@@ -99,7 +99,7 @@ const DoctorAppointments = () => {
   const handleClosedAppointments = () => {
     setShowOpenAppointments(false);
 
-    Axios.get("http://localhost:3001/api/doctors/closedAppointments", {
+    Axios.get(`${End_point}/api/doctors/closedAppointments`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
