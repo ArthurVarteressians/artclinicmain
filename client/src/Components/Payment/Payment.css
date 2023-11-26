@@ -1,0 +1,90 @@
+.paymentSec {
+  background-image: url("./b18.png");
+  height: 91vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-card {
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+  padding: 20px;
+  width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(219, 219, 219, 0.281);
+}
+
+.payment-card label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.payment-card input {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 10px 10px;
+  border: 1px solid silver;
+  width: 96%;
+  margin-bottom: 20px;
+  background: #ffffff94;
+}
+
+.card-details {
+  display: flex;
+  width: 95%;
+  justify-content: space-between;
+}
+
+.expiry-date {
+  width: 40%;
+}
+
+.security-code {
+  width: 40%;
+}
+
+.icon {
+  width: 35px;
+  margin-left: -40px;
+}
+
+
+.payment-card label svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+  .icon {
+    width: 23px;
+    margin-left: -35px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment-card {
+    width: 300px !important;
+  }
+
+  .icon {
+    width: 20px;
+    margin-left: -30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .payment-card {
+    width: 250px;
+  }
+
+  .icon {
+    width: 15px;
+    margin-left: -25px;
+  }
+}

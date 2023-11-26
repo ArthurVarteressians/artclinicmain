@@ -1,0 +1,12 @@
+.ChartSectionss {
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 10px;
+}
+
+.ChartSectionss h2{
+    text-align: center;
+}
+
+.NewRegCountText{
+    padding: 5px;
+}

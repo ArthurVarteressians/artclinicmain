@@ -1,0 +1,51 @@
+.AllSubmit {
+    background: rgba(148, 227, 227, 0.192);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.submitQinputs form {
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    max-width: 40%;
+}
+
+.submitQinputs input {
+    border: 1px solid silver;
+    background-color: rgba(255, 255, 255, 0.548) !important;
+    border-radius: 7px;
+    height: 30px;
+}
+
+.contactUsbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contactUsbox p {
+    border: 1px solid black;
+    padding: 10px;
+    margin: 20px auto;
+    width: 60%;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.493);
+}
+
+.AllSubmit button {
+    margin: 20px auto;
+}
+
+@media screen and (max-width:660px) {
+    .submitQinputs button{
+        width:75%;
+        font-size: clamp(8px, 2vw, 16px);
+        padding: 4px;
+        color: black;
+      }
+}

@@ -1,0 +1,242 @@
+.mainSignUpSec {
+  background-image: url("./b4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  height: 140vh;
+  max-width: 100%;
+}
+
+.SignUpSecText {
+  margin: 50px;
+  font-size: 1.8vw;
+  width: 50%;
+  border: 1px solid rgb(182, 182, 182);
+  background-color: rgba(219, 219, 219, 0.281);
+  padding: 14px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.container button {
+  width: 40%;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: black;
+  width: 70%;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+}
+
+.header {
+  text-align: left;
+  margin-bottom: 40px;
+  font-size: 1.8rem;
+  color: black;
+}
+
+.formField {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+}
+
+.formField label {
+  text-align: left;
+  margin-bottom: 5px;
+  color: black;
+  font-size: 1.4vw;
+}
+
+.formInput {
+  width: 25vw;
+  height: 35px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1px solid silver;
+  transition: all 0.2s ease-in;
+  background: #ffffff94;
+}
+
+.uncompleted {
+  width: 22vw;
+  height: 34px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  border: 1px solid red;
+  transition: all 0.2s ease-in;
+  background: #ffffff57;
+}
+
+.formInput:focus,
+.uncompleted:focus {
+  outline: none;
+  line-height: 30px;
+  height: 30px;
+  border: 1px solid #1a73e8;
+}
+
+.formField span {
+  height: 15px;
+  text-align: left;
+  margin-top: 7px;
+  width: fit-content;
+  font-size: 1vw;
+  color: red;
+  line-height: 1px;
+  padding: 5px 2px;
+  border-radius: 3px;
+}
+
+.testttt {
+  color: red;
+  font-size: 1.2vw;
+  text-align: center;
+  padding: 5px 10px;
+  max-width: 50%;
+}
+
+.checkBoxContainer {
+  display: flex;
+  font-size: 0.85rem;
+  flex-direction: row !important;
+  align-items: center;
+  height: 20px !important;
+  text-align: center;
+  padding-top: 15px;
+}
+
+.formField:nth-child(8) label {
+  color: #0c70f3;
+}
+
+input[type="checkbox"] {
+  margin-left: 20px;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #1a73e8;
+  appearance: none;
+  border-radius: 5px;
+  transition: all 0.2s ease-in;
+}
+
+input[type="checkbox"]:checked {
+  width: 18px;
+  height: 18px;
+  background-color: #09ff00;
+  border-radius: 50%;
+}
+
+input[type="checkbox"]:focus {
+  height: 18px;
+  width: 18px;
+  outline: none;
+  border: 1px solid #004aaa;
+}
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.countrySelect {
+  position: relative;
+}
+
+.countryInfo {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+}
+
+.countryPrefix {
+  margin-left: 5px;
+}
+
+
+@media screen and (max-width:660px) {
+  .mainSignUpSec {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  .header {
+    padding: 4px;
+    margin: 0;
+  }
+
+  .SignUpSecText {
+    padding: 5px;
+    margin: 10px;
+    width: 85vw;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .formContainer {
+    padding: 5px;
+    margin: 5px;
+  }
+
+  .formField {
+    padding: 2px;
+  }
+
+  input:not([type="checkbox"]) {
+    width: 80%;
+  }
+
+  input[type='checkbox'] {
+    width: 15px;
+    height: 15px;
+  }
+
+  input[type="checkbox"]:checked {
+    width: 15px;
+    height: 15px;
+  }
+
+  input[type="checkbox"]:focus {
+    height: 15px;
+    width: 15px;
+
+  }
+
+  .container button {
+    width: 25%;
+    font-size: clamp(12px, 2vw, 16px);
+    padding: 2px;
+  }
+
+  .formField label {
+    font-size: clamp(12px, 2vw, 16px);
+  }
+
+  .formField span {
+    font-size: clamp(12px, 2vw, 16px);
+
+  }
+}

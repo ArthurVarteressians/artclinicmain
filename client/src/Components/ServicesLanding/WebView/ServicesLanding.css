@@ -1,0 +1,83 @@
+.ServicesLWeb {
+    background-image: url("./b7.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+.ServicesLpageBody {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 36px;
+}
+
+.ServicesLContainer {
+    display: flex;
+    justify-content: center;
+    padding-top: 2px;
+}
+
+.ServicesLService {
+    background-color: #ffffff4b;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+    border-radius: 7px;
+    width: 100%;
+    margin: 12px;
+    display: flex;
+    padding: 15px 5px;
+}
+
+.ServicesLService .ServicesLContent img {
+    width: 18%;
+    margin: auto;
+}
+
+.ServicesLpageBody button {
+    margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+    .ServicesLContainer {
+        max-width: 90%;
+    }
+
+    .ServicesLService .ServicesLContent img {
+        width: 60px;
+        margin: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .ServicesLWeb {
+        height: 150vh;
+    }
+
+    .ServicesLContainer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ServicesLService {
+        width: 70vw;
+        max-width: none;
+        margin: 10px 0;
+        padding: 10px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.landingServicesDivider {
+    border: 1px solid rgba(0, 0, 0, 0.164);
+    border-radius: 40px;
+    width: 40%;
+}

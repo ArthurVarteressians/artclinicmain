@@ -1,0 +1,22 @@
+[
+  {
+    "id": 1,
+    "title": "About Us",
+    "content": " The Online Clinic is part of a private healthcare group, which is fully based in the UK. We are one of only a few online health care providers that are fully licensed by the Care Quality Commission.Our doctors are registered with the General Medical Council of Great Britain. You can always see the name of your doctor and their registration number on your diagnosis."
+  },
+  {
+    "id": 2,
+    "title": "When can I visit the clinic?",
+    "content": "Art Clinic is available every day. You can complete an online Signup and make an appontment and then scheduling meeting with your doctor."
+  },
+  {
+    "id": 3,
+    "title": "How much does this cost?",
+    "content": "A consultation will cost $25, payable online by any major credit card. No fee is charged if we are unable to diagnose and offer a treatment plan."
+  },
+  {
+    "id": 4,
+    "title": "Can I use my insurance for a Art Clinic visit?",
+    "content": "Art Clinic is a self-pay service. Depending on your insurance coverage, you may be able to submit your Art Clinic receipt for reimbursement."
+  }
+]

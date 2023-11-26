@@ -1,0 +1,30 @@
+.managerContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.managerSectionBody {
+  flex: 1;
+  background-image: url("../Img/b14.png");
+}
+
+.subheader {
+  display: flex;
+  justify-content: space-around;
+  padding-bottom: 20px;
+}
+
+.subheader button {
+  font-size: 16px;
+  padding: 10px 20px;
+  background-color: transparent;
+  border: none;
+  color: #333;
+  cursor: pointer;
+}
+
+.subheader button.active {
+  font-weight: bold;
+  color: #000;
+}

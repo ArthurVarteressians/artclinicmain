@@ -1,0 +1,68 @@
+.scroll-to-top {
+    scroll-behavior: auto !important;
+    scroll-margin-top: 0 !important;
+}
+
+.servicesWebMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-image: url(../b19.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.service1,
+.service2,
+.service3,
+.service4,
+.service5 {
+    width: 65%;
+    display: flex;
+    border-radius: 7px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+    background-color: rgba(255, 255, 255, 0.548) !important;
+    margin: 20px auto 5px auto;
+    align-items: center;
+}
+
+.service3,
+.service5 {
+    justify-content: end;
+}
+
+.servicesWebMain img {
+    width: 30vw;
+    max-height: 25vh;
+    padding: 10px;
+}
+
+.servicesWebMain p {
+    padding: 10px;
+    font-weight: 300;
+}
+
+@media (max-width: 600px) {
+
+    .servicesWebMain p {
+        font-size: 8px;
+        padding: 10px;
+        font-weight: 400;
+    }
+
+    .service1,
+    .service2,
+    .service3,
+    .service4,
+    .service5 {
+        width: 90%;
+    }
+
+    .servicesWebMain img {
+        padding: 8px;
+        border-radius: 40px;
+    }
+}

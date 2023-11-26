@@ -1,0 +1,28 @@
+.mainAppointmenthisttorySection {
+    max-height: 500px;
+    overflow-y: auto;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+}
+
+.grtidTest {
+    background-color: rgba(255, 255, 255, 0.548) !important;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.status {
+    font-weight: bold;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.closed {
+    background-color: rgba(0, 128, 0, 0.475);
+}
+
+.in-progress {
+    background-color: rgba(0, 98, 255, 0.387);
+    border-radius: 10px;
+}

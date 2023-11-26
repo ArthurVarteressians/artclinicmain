@@ -1,0 +1,57 @@
+.mainLangdingPageSec {
+    background-image: url("./back11.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.mainPageStructure {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 88vh;
+    align-items: center;
+}
+
+.LandingpageTexts {
+    display: flex;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.LandingpageTexts2 {
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+    width: 25%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(226, 226, 226, 0.486);
+}
+
+
+@media (max-width: 768px) {
+
+    .mainPageStructure {
+        height: 85vh;
+    }
+
+    .LandingpageTexts {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mainLangdingPageSec {
+        height: 100vh;
+    }
+
+    .LandingpageTexts2 {
+        width: 75%;
+        margin-top: 15px;
+        background-color: rgba(226, 226, 226, 0.766);
+    }
+
+    .LandingpageTexts2 p {
+        font-size: 2.8vw;
+    }
+}

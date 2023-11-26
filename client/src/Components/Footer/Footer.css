@@ -1,0 +1,150 @@
+.sec-padding {
+  padding: 0.5rem 5rem 0.3rem 5rem;
+}
+
+.scroll-to-top {
+  scroll-behavior: auto !important;
+  scroll-margin-top: 0 !important;
+}
+
+.footer {
+  background: rgba(148, 227, 227, 0.507);
+}
+
+.sb-footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.sb-footer-links {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 2rem;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+}
+
+.sb-footer-links-div {
+  width: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  color: rgb(52, 170, 224);
+}
+
+.sb-footer-links-div h4 {
+  font-weight: 900;
+}
+
+.sb-footer-links-div p {
+  font-weight: 300;
+  font-size: 14px !important;
+}
+
+a {
+  color: rgba(0, 0, 0, 0.699);
+  text-decoration: none;
+}
+
+.socialMedia {
+  display: flex;
+}
+
+.socialMedia h4 {
+  line-height: 17px;
+  margin-bottom: 0.9rem;
+}
+
+.socialMedia i {
+  font-size: 20px;
+}
+
+.socialMedia a {
+  font-size: 18px;
+  line-height: 15px;
+  margin: 0.5rem 0.5rem;
+  cursor: pointer;
+}
+
+.sb-footer-below {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 0.2rem;
+}
+
+.sb-footer-below-links {
+  display: flex;
+  flex-direction: row;
+}
+
+.sb-footer-below p {
+  font-size: smaller !important;
+}
+
+.sb-footer-below-links div p {
+  font-size: 10px;
+  font-weight: 400;
+  margin-left: 0.9rem;
+  color: rgb(46, 124, 241);
+}
+
+hr {
+  color: rgb(255, 255, 255) !important;
+  width: 100%;
+}
+
+.sb-footer-copyright p {
+  font-size: 10px;
+  font-weight: 400;
+  line-height: 15px;
+  color: rgb(46, 124, 241);
+}
+
+@media screen and (max-width: 850px) {
+  .sb-footer-links {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .sb-footer-below {
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .sb-footer {
+    text-align: center;
+  }
+
+  .sb-footer-links {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .sb-footer-links-div {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .sb-footer-below-links {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .sb-footer h4 {
+    font-size: 20px;
+  }
+
+  .sb-footer-links {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+@media screen and (max-width: 250px) {
+  .socialMedia i {
+    font-size: x-small;
+  }
+}

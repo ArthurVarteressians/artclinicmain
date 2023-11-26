@@ -1,0 +1,24 @@
+.ChartSectionssForApp {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.85) !important;
+  padding: 10px;
+}
+
+.chartContainerForApp {
+  width: 50%;
+}
+
+.chartWrapperForApp {
+  height: 400px;
+  width: 100%;
+}
+
+.chartContainerForApp h2 {
+  text-align: center;
+}
+
+.verticalLine {
+  border-left:  thin solid rgb(150, 150, 150);
+  padding-left: 10px;
+}

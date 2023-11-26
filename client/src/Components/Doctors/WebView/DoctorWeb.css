@@ -1,0 +1,125 @@
+.DoctorsWebBG {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+}
+
+.doctorsWebContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    height: 140vh;
+    justify-items: center;
+    align-items: center;
+}
+
+.doctorsWebcard {
+    position: relative;
+    max-width: 280px;
+    height: 280px;
+    background-color: #ffffff9d;
+    margin: 30px 10px;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 5px 202px rgba(0, 0, 0, 0.4);
+    transition: 0.3s ease-in-out;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+.doctorsWebcard:hover {
+    height: 400px;
+    transition: 0.5s;
+}
+
+.doctorsWebcard h1,
+h2,
+h4,
+h5 {
+    font-size: clamp(18px, 2vw, 12px) !important;
+}
+
+.doctorsWebcard p {
+    font-size: clamp(12px, 2vw, 16px) !important;
+}
+
+.imgBox {
+    position: relative;
+    width: 200px;
+    height: 10px;
+    top: -80px;
+    z-index: 1;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.075);
+    border-radius: 14px;
+}
+
+.imgBox img {
+    width: 200px;
+    height: 150px;
+    border-radius: 14px;
+}
+
+.content {
+    position: relative;
+    margin-top: -50px;
+    padding: 18px 15px;
+    text-align: center;
+    color: #1c2121bd;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.4s ease;
+}
+
+.doctorsWebcard:hover .content {
+    margin-top: 80px;
+    visibility: visible;
+    opacity: 1;
+    height: 280px;
+}
+
+.content .soc {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 30%;
+}
+
+.soc i {
+    color: #000000 !important;
+    font-size: 25px;
+    margin: 10px;
+}
+
+.contentboxText {
+    margin: 10px;
+}
+
+.contentboxText h5 {
+    margin: 40px 0px;
+    border-bottom: 1px solid silver;
+    color: rgba(48, 48, 48, 0.808);
+}
+
+.doctorsWebcard .contentboxText {
+    transition: 0.3s ease-in-out;
+}
+
+.doctorsWebcard:hover .contentboxText {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+
+@media screen and (max-width:850px) {
+    .doctorsWebContainer {
+        grid-template-columns: 1fr 1fr;
+        height: 100%;
+        padding-top: 40px;
+        gap: 30px 10px;
+    }
+}
