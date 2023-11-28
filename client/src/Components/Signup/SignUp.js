@@ -1,13 +1,16 @@
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+
 import React, { useState, useEffect } from "react";
 import { notify } from "./toast";
-import styles from "./SignUp.module.css";
 import validate from "./validate";
 import axios from "axios";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import End_point from "../../Baseurl";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import styles from "./SignUp.module.css";
+import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
+
 
 function SignUp({ onSignInClick }) {
   const [data, setData] = useState({
@@ -22,11 +25,12 @@ function SignUp({ onSignInClick }) {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [registrationDate, setRegistrationDate] = useState(null);
-  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setErrors(validate(data, "signup"));
-  }, [data, touched]);
+  }, [data, touched, navigate]);
 
   const changeHandler = (event) => {
     if (event.target.name === "isAccepted") {
@@ -35,15 +39,17 @@ function SignUp({ onSignInClick }) {
       setData({ ...data, [event.target.name]: event.target.value });
     }
   };
-  const focusHanlder = (event) => {
+
+  const focusHandler = (event) => {
     setTouched({ ...touched, [event.target.name]: true });
   };
 
   const submitHandler = async (event) => {
     event.preventDefault();
+
     const currentDate = new Date();
-    currentDate.setHours(0, 0, 0, 0); // Set time to midnight
-    const formattedDate = currentDate.toLocaleDateString();
+    currentDate.setHours(0, 0, 0, 0);
+    const formattedDate = currentDate.toISOString().split('T')[0];
 
     if (!Object.keys(errors).length) {
       const enteredData = {
@@ -56,25 +62,21 @@ function SignUp({ onSignInClick }) {
         isAccepted: data.isAccepted,
         registrationDate: formattedDate,
       };
+
       try {
-        const response = await axios.post(
-          `${End_point}/Profile`,
-          enteredData
-        );
+        const response = await axios.post(`${End_point}/Profile`, enteredData);
+
         if (response.status === 200) {
-          // Request was successful
           notify("You signed up successfully", "success");
           localStorage.setItem("token", response.data.token);
           setTimeout(() => {
-            window.location.href = "/Patient-Profile";
+            navigate("/Patient-Profile");
           }, 1000);
         }
       } catch (error) {
         if (error.response && error.response.status === 400) {
-          // Email already exists
           notify("Use Unique Information!", "error");
         } else {
-          // Handle other error responses
           console.error("Error:", error.message);
           notify("Invalid data!", "error");
         }
@@ -121,7 +123,7 @@ function SignUp({ onSignInClick }) {
               name="name"
               value={data.name}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.name && touched.name && <span>{errors.name}</span>}
           </div>
@@ -138,7 +140,7 @@ function SignUp({ onSignInClick }) {
               name="email"
               value={data.email}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.email && touched.email && <span>{errors.email}</span>}
           </div>
@@ -156,7 +158,7 @@ function SignUp({ onSignInClick }) {
               name="age"
               value={data.age}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.age && touched.age && <span>{errors.age}</span>}
           </div>
@@ -174,7 +176,7 @@ function SignUp({ onSignInClick }) {
               name="phonenumber"
               value={data.phonenumber}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.phonenumber && touched.phonenumber && (
               <span>{errors.phonenumber}</span>
@@ -194,7 +196,7 @@ function SignUp({ onSignInClick }) {
               name="password"
               value={data.password}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.password && touched.password && (
               <p className={styles.testttt}>{errors.password}</p>
@@ -213,7 +215,7 @@ function SignUp({ onSignInClick }) {
               name="confirmPassword"
               value={data.confirmPassword}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.confirmPassword && touched.confirmPassword && (
               <span>{errors.confirmPassword}</span>
@@ -274,7 +276,6 @@ function SignUp({ onSignInClick }) {
 }
 
 //===================================================Sign IN=======================================
-
 function SignIn({ onSignUpClick }) {
   const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
 
@@ -282,12 +283,13 @@ function SignIn({ onSignUpClick }) {
     email: "",
     password: "",
   });
-  // const [error, setError] = useState("");
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({
     email: false,
     password: false,
   });
+
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   useEffect(() => {
     setErrors(validate(data, "login"));
@@ -297,7 +299,7 @@ function SignIn({ onSignUpClick }) {
     setData({ ...data, [event.target.name]: event.target.value });
   };
 
-  const focusHanlder = (event) => {
+  const focusHandler = (event) => {
     setTouched({ ...touched, [event.target.name]: true });
   };
 
@@ -319,7 +321,7 @@ function SignIn({ onSignUpClick }) {
         const token = response.data.token;
         localStorage.setItem("token", response.data.token);
         setTimeout(() => {
-          window.location.href = "/Patient-Profile";
+          navigate("/Patient-Profile"); // Change the URL here
         }, 1000);
       }
     } catch (error) {
@@ -338,7 +340,6 @@ function SignIn({ onSignUpClick }) {
       }
     }
   };
-
   return (
     <div className={styles.mainSignUpSec}>
       <div className={styles.SignUpSecText}>
@@ -365,7 +366,7 @@ function SignIn({ onSignUpClick }) {
               name="email"
               value={data.email}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.email && touched.email && <span>{errors.email}</span>}
           </div>
@@ -382,7 +383,7 @@ function SignIn({ onSignUpClick }) {
               name="password"
               value={data.password}
               onChange={changeHandler}
-              onFocus={focusHanlder}
+              onFocus={focusHandler}
             />
             {errors.password && touched.password && (
               <span>{errors.loginpassword}</span>
