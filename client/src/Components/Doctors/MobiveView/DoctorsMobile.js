@@ -1,9 +1,9 @@
 import React from "react";
 import DoctorMobile from "./DoctorMobile";
-import img1 from "../img1.jpg";
-import img2 from "../img2.jpg";
-import img3 from "../img3.jpg";
-import img4 from "../img4.jpg";
+import img1 from "../img1.webp";
+import img2 from "../img2.webp";
+import img3 from "../img3.webp";
+import img4 from "../img4.webp";
 
 // import "./DoctorsMobile.css";
 

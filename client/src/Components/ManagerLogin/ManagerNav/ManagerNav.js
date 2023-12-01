@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "./logo.png";
+import Logo from "./logo.webp";
 import Logout from "./right-arrow.gif";
 
 function ManagerNav() {

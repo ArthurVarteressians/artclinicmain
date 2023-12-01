@@ -1,5 +1,5 @@
 import "./NavWeb.css";
-import Logo from "../Imgs/logo.png";
+import Logo from "../Imgs/logo.webp";
 import Telicon from "./emergency-call.gif";
 import LoginIcon from "./profile.gif";
 import { Link as ScrollLink } from "react-scroll";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../Imgs/logo.png";
+import Logo from "../Imgs/logo.webp";
 import Telicon from "../WebView/emergency-call.gif";
 import LoginIcon from "../WebView/profile.gif";
 import "./MobNav.css";

@@ -1,6 +1,6 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import Logo from "../Imgs/logo.png";
+import Logo from "../Imgs/logo.webp";
 import Telicon from "./emergency-call.gif";
 import LoginIcon from "./profile.gif";
 
