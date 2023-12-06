@@ -5,8 +5,7 @@ import NavWeb from "./Components/Navigation/WebView/NavWeb";
 function App() {
   return (
     <div>
-<Navigation />
-
+      <Navigation />
     </div>
   );
 }

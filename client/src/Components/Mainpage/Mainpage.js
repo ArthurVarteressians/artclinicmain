@@ -1,6 +1,7 @@
 import "./Mainpage.css";
 import ".././Sass/LandingpageButton.scss";
 import { Link } from "react-router-dom";
+import Popup from "../Popup/Popup";
 // import Doctors from "../Doctors/Doctors";
 function Mainpage() {
   return (
