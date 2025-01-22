@@ -1,11 +1,6 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
-import {
-  createBrowserRouter,
-  RouterProvider,
-  Route,
-  Link,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App";
 import Doctors from "./Components/Doctors/Doctors";
 import Mainpage from "./Components/Mainpage/Mainpage";
