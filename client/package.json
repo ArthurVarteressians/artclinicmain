@@ -5,9 +5,6 @@
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@emotion/styled": "^11.10.6",
-    "@fortawesome/free-solid-svg-icons": "^6.4.0",
-    "@fortawesome/react-fontawesome": "^0.2.0",
-    "@material-ui/core": "^4.12.4",
     "@mui/icons-material": "^5.11.11",
     "@mui/material": "^5.11.13",
     "@react-google-maps/api": "^2.19.2",
@@ -22,7 +19,6 @@
     "chart.js": "^4.2.1",
     "d3": "^7.8.4",
     "formik": "^2.2.9",
-    "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",
     "react-datepicker": "^4.11.0",

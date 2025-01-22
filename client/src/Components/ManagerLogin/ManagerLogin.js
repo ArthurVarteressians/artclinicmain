@@ -4,12 +4,9 @@ import { useNavigate } from "react-router-dom";
 import "./MangerLogin.css";
 import Navtest from "../Navigation/WebView/Navtest";
 import Footer from "../Footer/Footer";
-import { ToastContainer, toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
-import "react-toastify/dist/ReactToastify.css";
 import End_point from "../../Baseurl";
 const ManagerLogin = () => {
-  const [patientsList, setPatientList] = useState([]);
   const [managerEmail, setManagerEmail] = useState("");
   const [managerPassword, setManagerPassword] = useState("");
   const [error, setError] = useState("");
@@ -17,7 +14,7 @@ const ManagerLogin = () => {
   const navigate = useNavigate();
 
   const handleLogin = () => {
-    Axios.post(`${End_point}/ManagerLoginmmm`, {
+    Axios.post(`${End_point}/ManagerLogin`, {
       email: managerEmail,
       password: managerPassword,
     })

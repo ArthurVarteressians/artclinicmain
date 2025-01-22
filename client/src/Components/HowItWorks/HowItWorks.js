@@ -4,7 +4,6 @@ import calender from "./assets/calendar.gif";
 import checklist from "./assets/checklist.gif";
 import medicien from "./assets/medicine.gif";
 import stethsocpme from "./assets/stethoscope.gif";
-import ".././Sass/LandingpageButton.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 function HowItWorks() {
