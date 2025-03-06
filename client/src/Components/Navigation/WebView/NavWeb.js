@@ -12,7 +12,7 @@ import Services from "../../ServicesLanding/WebView/ServicesLanding";
 import LandingFaqsAll from "../../FAQS/LandingFaqsAll";
 import Footer from "../../Footer/Footer";
 import { useState } from "react";
-import Popup from "../../Popup/Popup";
+// import Popup from "../../Popup/Popup";
 function NavWeb() {
   const navigate = useNavigate();
   const handleClick = () => {
@@ -27,7 +27,7 @@ function NavWeb() {
   };
   return (
     <div className="navWebV">
-      <Popup />
+      {/* <Popup /> */}
       <div className="navWebVContainer">
         <Link to="/">
           <img src={Logo} alt="Logo" />

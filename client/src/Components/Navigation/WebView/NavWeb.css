@@ -1,83 +1,79 @@
 .navWebVContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0px;
-    z-index: 2;
-    height: 60px;
-    min-height: 70px;
-    width: 100%;
-    background-color: rgba(148, 227, 227, 0.952);
-    padding: 0 1rem;
-    box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0px;
+  z-index: 2;
+  height: 70px;
+  width: 100%;
+  background-color: rgba(148, 227, 227, 0.952);
+  box-shadow: 0 0.125rem 0.25rem 0 rgb(0 0 0 / 11%);
 }
 
 .navWebVContainer img {
-    width: 60px;
-    padding-top: 7px;
+  width: 60px;
+  padding-top: 7px;
 }
 
 .navWebVLinks {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  align-items: center;
+  width: 80%;
+  justify-content: flex-end;
+  font-size: 1.2vw;
+}
+
+.navWebVLinks li {
+  margin-right: 20px;
+}
+
+.navWebVLinks li a {
+  cursor: pointer !important;
+}
+
+.iconLoginNav img,
+.iconNumSe img {
+  width: 2.4vw;
+}
+
+.iconNumSe {
+  position: relative;
+  cursor: pointer;
+}
+
+.iconNumber {
+  position: absolute;
+  left: -25px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.iconNumSe:hover .iconNumber {
+  top: 40px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.active {
+  font-weight: bold;
+}
+
+@media (max-width: 660px) {
+  .navWebVContainer img {
+    width: 40px;
+  }
+
+  .navWebVLinks {
     display: flex;
     flex-direction: row;
     list-style: none;
     align-items: center;
     width: 80%;
     justify-content: flex-end;
-    font-size: 1.3vw;
-}
-
-.navWebVLinks li {
-    margin-right: 20px;
-}
-
-.navWebVLinks li a {
-    cursor: pointer !important;
-
-}
-
-.iconLoginNav img,
-.iconNumSe img {
-    width: 3.3vw;
-}
-
-.iconNumSe {
-    position: relative;
-    cursor: pointer;
-}
-
-.iconNumber {
-    position: absolute;
-    left: -25px;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 0.6s ease;
-}
-
-.iconNumSe:hover .iconNumber {
-    top: 40px;
-    visibility: visible;
-    opacity: 1;
-}
-
-.active {
-    font-weight: bold;
-}
-
-
-@media (max-width: 660px) {
-    .navWebVContainer img {
-        width: 40px;
-    }
-
-    .navWebVLinks {
-        display: flex;
-        flex-direction: row;
-        list-style: none;
-        align-items: center;
-        width: 80%;
-        justify-content: flex-end;
-        font-size: 1.8vw;
-    }
+    font-size: 1.8vw;
+  }
 }

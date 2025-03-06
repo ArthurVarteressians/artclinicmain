@@ -4,7 +4,6 @@ import img1 from "../1.webp";
 import img2 from "../2.webp";
 import img3 from "../3.webp";
 import HowItWorks from "../../HowItWorks/HowItWorks";
-import "../../Sass/LandingpageButton.scss";
 import { Link, useNavigate } from "react-router-dom";
 
 const Services = () => {

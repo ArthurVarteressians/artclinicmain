@@ -1,3 +1,3 @@
-const End_point = 'http://54.227.201.183:3001';
+const End_point = 'https://api.arthur-clinic.com';
 
 export default End_point;

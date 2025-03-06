@@ -4,20 +4,19 @@ import { useNavigate } from "react-router-dom";
 import "./MangerLogin.css";
 import Navtest from "../Navigation/WebView/Navtest";
 import Footer from "../Footer/Footer";
-import { ToastContainer, toast } from "react-toastify";
 import ReCAPTCHA from "react-google-recaptcha";
-import "react-toastify/dist/ReactToastify.css";
 import End_point from "../../Baseurl";
+
 const ManagerLogin = () => {
-  const [patientsList, setPatientList] = useState([]);
   const [managerEmail, setManagerEmail] = useState("");
   const [managerPassword, setManagerPassword] = useState("");
   const [error, setError] = useState("");
 
   const navigate = useNavigate();
 
+  // Function to handle login logic
   const handleLogin = () => {
-    Axios.post(`${End_point}/ManagerLoginmmm`, {
+    Axios.post(`${End_point}/ManagerLogin`, {
       email: managerEmail,
       password: managerPassword,
     })
@@ -42,6 +41,17 @@ const ManagerLogin = () => {
       });
   };
 
+  // Function to autofill demo account credentials (for doctor or manager)
+  const handleDemoLogin = (role) => {
+    if (role === "doctor") {
+      setManagerEmail("A.kim@doctor.com");
+      setManagerPassword("123");
+    } else if (role === "manager") {
+      setManagerEmail("artclinic@manager.com");
+      setManagerPassword("54321");
+    }
+  };
+
   return (
     <div>
       <Navtest />
@@ -50,33 +60,57 @@ const ManagerLogin = () => {
         <div className="mainSignUpBodySection">
           <h2>Admin Login</h2>
           <div className="mainSignUpBody">
+
+
+            {/* Email input */}
             <label htmlFor="email">Email</label>
             <input
               placeholder="Enter your email"
               type="email"
               id="email"
+              value={managerEmail}
               onChange={(e) => {
                 setManagerEmail(e.target.value);
               }}
             />
 
+            {/* Password input */}
             <label htmlFor="password">Password</label>
             <input
               placeholder="Enter password"
               type="password"
               id="password"
+              value={managerPassword}
               onChange={(e) => {
                 setManagerPassword(e.target.value);
               }}
             />
 
+            {/* Sign In Button */}
             <button onClick={handleLogin}>Sign In</button>
+                        {/* Demo Accounts Button */}
+                        <div className="demo-accounts">
+              <button
+                className="demo-btn"
+                onClick={() => handleDemoLogin("doctor")}
+              >
+                Demo Doctor Account
+              </button>
+              <button
+                className="demo-btn"
+                onClick={() => handleDemoLogin("manager")}
+              >
+                Demo Manager Account
+              </button>
+            </div>
 
+            {/* Error message */}
             {error && <p className="error">{error}</p>}
           </div>
         </div>
       </div>
 
+      {/* Invisible ReCAPTCHA */}
       <ReCAPTCHA
         sitekey="6Ld0BAwmAAAAAKmgFmJaKfws1Q8JWmb0IGg0IUwc"
         theme="light"
@@ -86,4 +120,5 @@ const ManagerLogin = () => {
     </div>
   );
 };
+
 export default ManagerLogin;

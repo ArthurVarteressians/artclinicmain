@@ -1,19 +1,36 @@
+const util = require("util");
+
 const express = require("express");
 const app = express();
 const mysql = require("mysql2");
 const cors = require("cors");
 const bcrypt = require("bcrypt");
-const util = require("util");
 const jwt = require("jsonwebtoken");
-const { verify } = require("crypto");
 const moment = require("moment");
 const saltRounds = 10;
+
 app.use(cors());
 app.use(express.json());
+
 const axios = require("axios");
 const db = require("./database");
+const morgan = require("morgan");
+app.use(morgan("dev"));
 
-const PORT = 3001;
+console.log("Attempting to connect to MySQL...");
+
+app.get("/", (req, res) => {
+  res.send("Hello, this is the root endpoint!");
+});
+
+const PORT = process.env.PORT || 3001;
+
+const http = require("http"); // For Local Only! You should use VPS version!
+const server = http.createServer(app);
+
+server.listen(PORT, () => console.log(`Server is Up on port ${PORT}`));
+
+
 //===========================Clinic DB===================================
 const SECRET = "1I1d6WhwZWjGn4ijZDpBaGq";
 const query = util.promisify(db.query).bind(db);
@@ -25,7 +42,7 @@ const clientLogin = require("./routes/clientLoginServerFile");
 app.use("/ClientsLogins", clientLogin);
 // =================================Manager Logic===============================
 const managerLoginRouter = require("./routes/managerLoginServerFile");
-app.use("/ManagerLoginmmm", managerLoginRouter);
+app.use("/ManagerLogin", managerLoginRouter);
 //=================================Manager Call Requests Show===============================
 const managerConsultingReq = require("./routes/managerConsultingReqServerFile");
 app.use("/ConsultingReq", managerConsultingReq);
@@ -70,10 +87,10 @@ const availabilityRouter = require("./routes/availability");
 app.use("/checkAvailability", availabilityRouter);
 //===============================================Update Patient Status In Doctors Sections==============================
 const statusUpdateDoc = require("./routes/updateStatusInDoctorSection");
-app.use("/api/appointments", statusUpdateDoc);
+app.use("/localhost:3001/appointments", statusUpdateDoc);
 //===============================================Doctor Dashbord Appointments Info==============================
 const doctorsDashbordAppointment = require("./routes/doctorsDashbordAppointment");
-app.use("/api/doctors", doctorsDashbordAppointment);
+app.use("/localhost:3001/doctors", doctorsDashbordAppointment);
 //===============
 
 //=======================================================Clinet Part===============================================
@@ -106,7 +123,7 @@ app.post("/Sched", verifyToken, async (req, res) => {
 
   try {
     const availabilityResponse = await axios.post(
-      "http://localhost:3001/checkAvailability",
+      "https://localhost:3001/checkAvailability",
       {
         doctorId,
         date,
@@ -240,7 +257,3 @@ app.get("/PatientAppointmentHistory", verifyToken, (req, res) => {
     }
   );
 });
-
-///===============================PORT======================
-
-app.listen(PORT, () => console.log(`Server is Up on port ${PORT}`));

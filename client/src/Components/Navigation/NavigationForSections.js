@@ -1,11 +1,10 @@
-import { useMediaQuery } from "@material-ui/core";
-import NavWeb from "./WebView/NavWeb";
-import MobNav from "./MobView/MobNav";
+import useMediaQuery from "./../hooks/useMediaQuery";
 import Navtest from "./WebView/Navtest";
 import MobNavForSections from "./MobView/MobNavForSections";
+
 function NavigationForSections() {
-  const ifWeb = useMediaQuery("(width > 769px)");
-  const ifMob = useMediaQuery("(width < 768px)");
+  const ifWeb = useMediaQuery("(min-width: 770px)");
+  const ifMob = useMediaQuery("(max-width: 769px)");
 
   return (
     <div>
@@ -14,4 +13,5 @@ function NavigationForSections() {
     </div>
   );
 }
+
 export default NavigationForSections;

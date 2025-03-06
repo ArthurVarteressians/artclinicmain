@@ -1,11 +1,12 @@
-import { useMediaQuery } from "@material-ui/core";
+import useMediaQuery from "./../hooks/useMediaQuery";
 import DoctorsWeb from "./WebView/DoctorsWeb";
 import DoctorsMobile from "./MobiveView/DoctorsMobile";
 import Footer from "../Footer/Footer";
 import NavigationForSections from "../Navigation/NavigationForSections";
+
 function Doctors() {
-  const ifWeb = useMediaQuery("(width > 650px)");
-  const ifMob = useMediaQuery("(width < 649.9px)");
+  const ifWeb = useMediaQuery("(min-width: 651px)");
+  const ifMob = useMediaQuery("(max-width: 650.9px)");
 
   return (
     <div>

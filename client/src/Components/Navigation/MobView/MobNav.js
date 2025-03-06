@@ -6,7 +6,6 @@ import LoginIcon from "../WebView/profile.gif";
 import "./MobNav.css";
 import Mainpage from "../../Mainpage/Mainpage";
 import Services from "../../ServicesLanding/WebView/ServicesLanding";
-import LandingFaqs from "../../FAQS/LandingFaqs";
 import Footer from "../../Footer/Footer";
 import LandingFaqsAll from "../../FAQS/LandingFaqsAll";
 function MobNav() {

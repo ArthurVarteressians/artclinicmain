@@ -1,80 +1,78 @@
 .mainDoctorsprofile {
-    background-image: url("b18.webp");
-    background-position: center;
-    background-size: cover;
-    min-height: 91vh;
+  background-image: url("b18.webp");
+  background-position: center;
+  background-size: cover;
+  min-height: 91vh;
 }
 
 .mainDoctorsProfileBTN {
-    display: flex;
-    justify-content: space-around;
-
+  display: flex;
+  justify-content: space-around;
 }
 
 .statusHeader {
-    display: flex;
-    justify-content: center;
-    text-align: center;
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }
 
 .mainDoctorsprofile h2 {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
-    min-width: 40%;
-    margin: 20px 0px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
+  min-width: 40%;
+  margin: 20px 0px;
 }
 
 .ClosedSection {
-    padding: 10px 0px;
+  padding: 10px 0px;
 }
 
 .closed-appointments {
-    background-color: rgba(219, 219, 219, 0.571);
-    max-width: 95%;
-    margin: auto;
-    padding: 25px;
-    border-radius: 5px;
-    border: 1px solid black;
+  background-color: rgba(219, 219, 219, 0.571);
+  max-width: 90%;
+  margin: auto;
+  padding: 25px;
+  border-radius: 9px;
+  border: 1px solid black;
 }
 
 .appointment-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
-    gap: 25px;
-    justify-items: center;
-    padding: 10px 0px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+  gap: 70px;
+  justify-items: center;
+  padding: 20px 20px;
 }
 
 .appointment-card {
-    background-color: rgba(255, 255, 255, 0.386);
-    padding: 20px;
-    border-radius: 5px;
-    border: 1px solid rgb(12, 12, 12);
-    width: 425px;
-
+  background-color: rgba(255, 255, 255, 0.386);
+  padding: 30px;
+  border-radius: 5px;
+  border: 1px solid rgb(12, 12, 12);
+  width: 425px;
 }
 
 .label {
-    font-weight: 300;
+  font-weight: 300;
 }
 
 .value {
-    font-weight: 600;
+  font-weight: 600;
 }
 
 .status-closed {
-    background-color: rgba(0, 128, 0, 0.475);
-    font-size: 12px;
-    font-weight: 300;
-    padding: 0px 5px;
-    border-radius: 3px;
+  background-color: rgba(0, 128, 0, 0.475);
+  font-size: 12px;
+  font-weight: 300;
+  padding: 0px 5px;
+  border-radius: 3px;
 }
 
 .changeStatusDropDown {
-    display: flex;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }

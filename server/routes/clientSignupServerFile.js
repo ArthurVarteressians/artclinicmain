@@ -16,10 +16,6 @@ router.post("/", async (req, res) => {
       req.body;
     if (password) {
       try {
-        const registrationDate = moment(
-          req.body.registrationDate,
-          "MM/DD/YYYY"
-        ).format("YYYY-MM-DD");
   
         // Check if email or phone number already exist in the database
         db.query(
@@ -49,7 +45,7 @@ router.post("/", async (req, res) => {
                     age,
                     phonenumber,
                     hashedPassword,
-                    registrationDate,
+                    registrationDate
                   ]
                 );
                 db.query(

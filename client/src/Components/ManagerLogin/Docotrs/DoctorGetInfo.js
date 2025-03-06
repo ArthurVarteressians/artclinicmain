@@ -158,6 +158,7 @@ const DoctorAppointments = () => {
             Doctor <span style={{ fontWeight: "500" }}>{doctorFullName}</span>
           </h3>
           <div className="mainDoctorsProfileBTN">
+            
             <button onClick={handleGetAppointments}>
               Get Open Appointments
             </button>
