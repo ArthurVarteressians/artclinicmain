@@ -9,18 +9,22 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height:100vh;
     background-image: url(../b19.webp);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
+.servicesWebMain button{
+    margin-top:30px;
+}
 .service1,
 .service2,
 .service3,
 .service4,
 .service5 {
-    width: 65%;
+    width: 70%;
     display: flex;
     border-radius: 7px;
     box-shadow: 1px 1px 10px 3px rgba(0, 0, 0, 0.76);
@@ -35,8 +39,8 @@
 }
 
 .servicesWebMain img {
-    width: 30vw;
-    max-height: 25vh;
+    width: 20vw;
+    max-height: 20vh;
     padding: 10px;
 }
 

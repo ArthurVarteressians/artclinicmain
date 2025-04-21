@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { notify } from "./toast";
 import validate from "./validate";
@@ -10,7 +9,6 @@ import "react-toastify/dist/ReactToastify.css";
 import styles from "./SignUp.module.css";
 import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
-
 
 function SignUp({ onSignInClick }) {
   const [data, setData] = useState({
@@ -49,7 +47,7 @@ function SignUp({ onSignInClick }) {
 
     const currentDate = new Date();
     currentDate.setHours(0, 0, 0, 0);
-    const formattedDate = currentDate.toISOString().split('T')[0];
+    const formattedDate = currentDate.toISOString().split("T")[0];
 
     if (!Object.keys(errors).length) {
       const enteredData = {
@@ -101,10 +99,17 @@ function SignUp({ onSignInClick }) {
       <div className={styles.SignUpSecText}>
         <p>
           At <span style={{ fontWeight: "bold" }}> Art Clinic</span>, we believe
-          that every patient deserves the highest quality of care. That's why
-          our team of skilled physicians and healthcare professionals are
-          dedicated to providing personalized, compassionate care to each and
-          every patient.
+          that every patient deserves the highest quality of care, tailored to
+          their unique needs and delivered with unwavering commitment to
+          excellence.
+          <p>
+            That's why our team of highly skilled physicians and dedicated
+            healthcare professionals goes above and beyond to provide
+            personalized, compassionate care to each and every patient who walks
+            through our doors.
+          </p>
+          Because when it comes to your health, nothing less than the best will
+          do. At Art Clinic, we don’t just treat conditions <span style={{ fontWeight: "bold" }}> we care for people</span>.
         </p>
       </div>
       <div className={styles.container}>

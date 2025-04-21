@@ -109,6 +109,8 @@ hr {
   }
 
   .sb-footer-below {
+    display: flex;
+    flex-direction: column;
     align-items: center;
   }
 }
@@ -120,11 +122,13 @@ hr {
 
   .sb-footer-links {
     grid-template-columns: 1fr 1fr;
+    text-align: center;
   }
 
   .sb-footer-links-div {
     width: 100%;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   .sb-footer-below-links {
@@ -140,8 +144,11 @@ hr {
   .sb-footer-links {
     grid-template-columns: 1fr;
   }
-}
 
+  .socialMedia{
+    margin:auto;
+  }
+}
 
 @media screen and (max-width: 250px) {
   .socialMedia i {
